@@ -1,0 +1,51 @@
+a {
+  text-decoration: none;
+}
+
+address {
+  font-style: normal;
+}
+
+p,
+h2,
+h3 {
+  margin: 0;
+}
+
+input {
+  padding: 0;
+}
+
+button {
+  border: none;
+}
+
+.card-img {
+  display: block;
+}
+
+.link:hover,
+.link:focus {
+  color: $text-color-accent;
+}
+
+body {
+  background-color: $bg-color-white;
+  color: $text-color-primary;
+
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+.icon {
+  fill: currentColor;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}

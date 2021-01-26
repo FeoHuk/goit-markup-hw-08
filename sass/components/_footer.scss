@@ -1,0 +1,188 @@
+.basement {
+  background-color: $bg-color-dark-grey;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  &-wrap {
+    @extend %width;
+    @extend %container;
+    @media screen and (min-width: 767px) {
+      display: flex;
+      align-items: baseline;
+    }
+
+    @media screen and (max-width: 1199px) {
+      flex-wrap: wrap;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      padding-left: 76px;
+      padding-right: 89px;
+    }
+  }
+}
+
+.company-info {
+  @extend %flex-column;
+
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 231px;
+  }
+}
+
+.basement .logo {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.address {
+  @extend %transition;
+  color: $bg-color-white;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  &:hover,
+  &:focus {
+    color: $text-color-accent;
+  }
+}
+
+.contacts-bottom {
+  @extend %flex-column;
+
+  .link {
+    @extend %transition;
+    @extend %link-fonts;
+    margin-top: 9px;
+  }
+}
+
+.join {
+  @media screen and (min-width: 768px) {
+    margin-left: auto;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 70px;
+  }
+
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
+
+  .socials {
+    padding: 0;
+  }
+
+  .socials-link {
+    color: $bg-color-white;
+  }
+}
+
+.bottom-title {
+  margin-bottom: 20px;
+  color: $bg-color-white;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.subscription-section {
+  @media screen and (max-width: 1199px) {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    text-align: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 93px;
+  }
+}
+
+.subscription {
+  display: flex;
+
+  @media screen and (max-width: 1199px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.subscription-button .icon {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.subscription-input {
+  @extend %transition;
+  display: block;
+  padding: 15px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: $bg-color-dark-grey;
+  color: $bg-color-white;
+  width: 100%;
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 1px $bg-color-white;
+  }
+}
+
+.subscription-field {
+  @media screen and (max-width: 479px) {
+    width: 100%;
+  }
+
+  @media screen and (min-width: 480px) {
+    width: 450px;
+  }
+
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+  }
+}
+
+.subscription-button {
+  @include centered-flex;
+  width: 200px;
+  height: 50px;
+  background-color: $text-color-accent;
+  padding: 10px 28px;
+  border-color: $text-color-accent;
+  border-radius: 4px;
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 12px;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.submit-text {
+  @extend %submit-text;
+}
+
+.basement-box {
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 60px;
+    }
+  }
+}

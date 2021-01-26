@@ -1,0 +1,92 @@
+.project-info {
+  padding: 20px 24px;
+  border-right: 1px solid $border-color-projects;
+  border-bottom: 1px solid $border-color-projects;
+  border-left: 1px solid $border-color-projects;
+}
+
+.project-name {
+  color: $text-color-secondary;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  margin-bottom: 4px;
+}
+
+.project-type {
+  color: $text-color-primary;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.03em;
+}
+
+.projects {
+  margin: -15px;
+
+  &-item {
+    margin: 15px;
+
+    @media screen and (min-width: 768px) {
+      width: calc((100% - 60px) / 2);
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: calc((100% - 90px) / 3);
+    }
+  }
+
+  &-item:hover,
+  &-item:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.thumb {
+  position: relative;
+  height: 294px;
+  overflow: hidden;
+
+  @media screen and (min-width: 1200px) {
+    width: 370px;
+  }
+}
+
+.overlay {
+  @extend %transition;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  z-index: 1;
+
+  transition-property: transform;
+}
+
+.project-link {
+  display: block;
+
+  &:hover .overlay,
+  &:focus .overlay {
+    transform: translateY(0);
+  }
+}
+
+.overlay-text {
+  padding: 63px 24px;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+  color: $bg-color-white;
+}

@@ -1,0 +1,79 @@
+.attic {
+  @include centered-flex;
+  @extend %container;
+  @extend %width;
+
+  @media screen and (max-width: 767px) {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: relative;
+  }
+}
+
+.main-nav {
+  @include centered-flex;
+  @extend %width;
+}
+
+.menu-container {
+  z-index: 3;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+
+    background-color: $bg-color-white;
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    border-top: 1px solid $border-color-header;
+
+    &.is-open {
+      display: block;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    text-align: baseline;
+    justify-content: space-between;
+    margin-left: 88px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 93px;
+  }
+}
+
+.menu-button {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  margin-left: auto;
+
+  @extend %hover;
+
+  .close-menu {
+    display: none;
+  }
+
+  &.is-open {
+    .close-menu {
+      display: block;
+    }
+
+    .menu {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
